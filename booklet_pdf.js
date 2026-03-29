@@ -2,7 +2,6 @@ const axios = require("axios");
 const puppeteer = require("puppeteer");
 const conn = require("../main_app/db");
 const path = require("path");
-const chromePaths = require("chrome-paths");
 const fs = require("fs");
 
 const loadData = async (c_code) => {
@@ -43,7 +42,6 @@ async function generatePDF(data, res, c_code) {
     const browser = await puppeteer.launch({
       headless: true,
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
-      executablePath: chromePaths.chrome,
       timeout: 60000,
     });
     var $index = 0;
