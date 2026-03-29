@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+/* .container{
+    width: 100%;
+    margin: 10px 0 10px 10px;
+} */
+
+
+
+.branch_topButtons{
+    position: relative;
+    left: 10px;
+}
+
+.title_branch_details{
+    margin: 25px 0px 18px 18px ;
+    font-size: 26px;
+}
+
+.branch_navigateBtns{
+    text-decoration: none;
+    padding: 7px 20px;
+    background-color: #1b8aac;
+    color: #fff;
+    border-radius: 7px;
+    margin-right: 20px;
+}
+
+.branch_navigateBtns:hover{
+    background-color:#2c974b;
+}
+
+.branch_table{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top:10px;
+    /* margin-top: 50px;     */
+    width: max-content;
+    width: 100%;
+    /* margin-bottom: 40px; */
+    border: 1px solid #1b8aac;
+}
+
+.branch_table_1{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    width: 100%;
+    border: 1px solid #1b8aac;
+}
+
+
+
+
+.proposed_table .th{
+    /* padding: 5px 0px; */
+    border-radius: 5px;
+    background-color:#1E90FF;
+}
+
+th{
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color:#1E90FF;
+}
+
+td{
+    padding: 8px 49px;
+    text-align: center;
+}
+
+.branch_si_no{
+    padding: 8px 26px;
+    width:5%;
+}
+
+.proposed_branch_si_no{
+    padding: 8px 26px;
+    width:5%;
+}
+
+.proposed_branch_si_no_val{
+    width:12%;
+}
+
+.branch_intake{
+    width: 115px;
+}
+
+.proposed_branch_intake{
+    width: 15%;
+}
+
+.branch_yos{
+    width:132px;
+}
+
+.branch_nba{
+    width: 120px;
+}
+
+.branch_validity{
+    width: 135px;
+}
+
+.branch_short{
+    width:12.5%;
+}
+
+.proposed_branch_short{
+    width:20.5%;
+}
+
+.proposed_branch_short_val{
+    width:26%;
+}
+
+/* .branch_si_no{
+    width: 12%;
+} */
+
+.branch_large{
+    width:20%;
+}
+
+.proposed_branch_large{
+    width:26%;
+}
+
+.proposed_intake{
+    width:0%;
+}
+
+.proposed_branch_large_val{
+    width:35%;
+}
+
+.branch_btns{
+    width:12%;
+}
+
+.proposed_intake_val{
+    width: 98%;
+}
+
+.branch_editBtn,.branch_deleteBtn{
+    width:12%;
+}
+
+.proposed_branch_editBtn,.proposed_branch_deleteBtn{
+    width:5%;
+}
+
+
+
+.branch_editLink{
+    /* position: absolute;
+    left:38px; */
+    /* bottom: 10px; */
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #2c974b;
+    /* width: 160px; */
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.branch_deleteLink{
+    /* position: absolute; */
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    background-color:#d62a2a;
+    /* width: 160px; */
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.proposed_branch_editLink{
+    /* position: absolute;
+    left:38px; */
+    /* bottom: 10px; */
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #2c974b;
+    /* width: 160px; */
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.proposed_branch_deleteLink{
+    /* position: absolute; */
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    background-color:#d62a2a;
+    /* width: 160px; */
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.proposed_table_head{
+    height: 70px;
+}
+
+.proposed_table_row{
+    padding-left: 200px;
+}

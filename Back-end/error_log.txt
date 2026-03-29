@@ -1,0 +1,96 @@
+
+    
+======================
+    Time: 2025-05-31T07:43:07.018Z
+    Error: Chrome Path : null
+    ======================
+
+    
+======================
+    Time: 2025-05-31T07:43:07.021Z
+    Error: Error in generating PDF : Error: An `executablePath` or `channel` must be specified for `puppeteer-core`
+    ======================
+
+    
+======================
+    Time: 2025-05-31T07:43:22.722Z
+    Error: Chrome Path : null
+    ======================
+
+    
+======================
+    Time: 2025-05-31T07:43:22.723Z
+    Error: Error in generating PDF : Error: An `executablePath` or `channel` must be specified for `puppeteer-core`
+    ======================
+
+    
+======================
+    Time: 2025-05-31T09:22:32.134Z
+    Error: Chrome Path : null
+    ======================
+
+    
+======================
+    Time: 2025-05-31T09:22:32.151Z
+    Error: Error in generating PDF : Error: An `executablePath` or `channel` must be specified for `puppeteer-core`
+    ======================
+
+    
+======================
+    Time: 2025-05-31T09:25:18.223Z
+    Error: Chrome Path : null
+    ======================
+
+    
+======================
+    Time: 2025-05-31T09:25:18.226Z
+    Error: Error in generating PDF : Error: An `executablePath` or `channel` must be specified for `puppeteer-core`
+    ======================
+
+    
+======================
+    Time: 2025-05-31T09:30:52.634Z
+    Error: Chrome Path : null
+    ======================
+
+    
+======================
+    Time: 2025-05-31T09:30:52.637Z
+    Error: Error in generating PDF : Error: An `executablePath` or `channel` must be specified for `puppeteer-core`
+    ======================
+
+    
+======================
+    Time: 2025-05-31T09:33:36.020Z
+    Error: Chrome Path : null
+    ======================
+
+    
+======================
+    Time: 2025-05-31T09:33:36.022Z
+    Error: Error in generating PDF : Error: An `executablePath` or `channel` must be specified for `puppeteer-core`
+    ======================
+
+    
+======================
+    Time: 2025-05-31T09:35:35.250Z
+    Error: Chrome Path : null
+    ======================
+
+    
+======================
+    Time: 2025-05-31T09:35:35.254Z
+    Error: Error in generating PDF : Error: An `executablePath` or `channel` must be specified for `puppeteer-core`
+    ======================
+
+    
+======================
+    Time: 2025-05-31T09:36:20.618Z
+    Error: Chrome Path : null
+    ======================
+
+    
+======================
+    Time: 2025-05-31T09:37:16.790Z
+    Error: Chrome Path : null
+    ======================

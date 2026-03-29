@@ -1,0 +1,200 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.Home-page {
+    max-width: 100%; 
+    margin: 0 auto;
+    padding: 30px;
+    font-family: 'Verdana', sans-serif;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 12px;
+}
+.grid-container-college .home-part1-collegedetails p , 
+.grid-container-college .home-part1-collegedetails p,.home-part1-bankdetails p,.home-part2-bankdetails p,.home-part3-bankdetails p,.home-part3-collegedetails p {
+  font-size: 16px;
+  color:black ;
+  padding: 8px 0 ;
+  line-height: 1.5 ;
+}
+
+.grid-container-college,.grid-container-bank,.grid-container-hostel-boys{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 10px;
+    margin-left: 50px;
+  }
+  
+  .home-part1-collegedetails, .home-part2-collegedetails,.home-part3-collegedetails, .home-part1-bankdetails, .home-part2-bankdetails,.home-part3-bankdetails {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(50px, 2fr)); 
+    gap: 10px; 
+  }
+
+  .home-part1-collegedetails p, .home-part2-collegedetails p {
+    font-size: 16px;
+    color: #343437;
+    padding: 8px 0;
+    line-height: 1.5;
+  }
+  
+
+
+
+.Home-page-collegedetails, .Home-page-Bankdetails {
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease; 
+}
+
+
+.Home-page-collegedetails:hover, .Home-page-Bankdetails {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+}
+
+
+.home-button-tittle, .home-bankdetails-tittle,.home-branch-details-tittle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.home-button-tittle h1, .home-bankdetails-tittle h1 {
+    font-size: 24px; 
+    font-weight: 600;
+    color: #0e0e0f;
+    margin: 0;
+}
+
+.home-button-tittle button, .home-bankdetails-tittle button,  .Home-Branchdetails button{
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.home-button-tittle button:hover, .home-bankdetails-tittle button, .Home-Branchdetails button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05); 
+}
+
+
+
+
+.home-part1-bankdetails p, 
+.home-part2-bankdetails p,.home-part3-bankdetails p {
+    font-size: 16px;
+    color:black;
+    padding: 8px 0;
+    line-height: 1.5; 
+}
+
+.home-part1-collegedetails  p span {
+    margin-left: 8px;
+    font-weight: 500;
+    color: black;
+}
+
+ 
+.Home-Branchdetails {
+    background-color: #f7f9fc; 
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+
+.Home-Branchdetails table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f7f9fc;
+}
+.Home-Branchdetails th, .Home-Branchdetails td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.Home-Branchdetails th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+.Home-Branchdetails td:not(.branch-name-align)
+{
+    text-align: center;
+}
+.Home-Branchdetails td {
+    background-color: #fff;
+}
+.freeze-button{
+    background-color: red;
+    width:100px;
+    height:40px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    
+}
+.view-pdf-button{
+    background-color: #3dc03b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.button-section{
+    display: flex;
+    justify-content: center;
+    gap:30px;
+
+}
+.download-pdf-button{
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+
+}
+.Home-college-info-header {
+    
+   display: flex;
+   justify-content:center;
+   /* margin-left: 420px; */
+   width: 100%;
+   margin-left: 280px;
+   margin-bottom: 50px;
+  
+   
+}
+
+.college-details-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1000px;
+    padding: 20px;
+    align-items: start;
+   
+}

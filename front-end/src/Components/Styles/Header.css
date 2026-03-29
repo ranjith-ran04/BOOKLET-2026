@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.header_container{
+    display: flex;
+    align-items: center;
+    height: 90px;
+    justify-content: space-around;
+    background-color: silver;
+    margin: 10px;
+}
+
+.header_logo{
+    width: 70px;
+    height: 70px;
+}
+
+.header_heading{
+    font-size: medium;
+    text-align: center;
+}
+
+.header_login{
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+}
+.header_logout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+.logout_text {
+    margin-top: 5px; 
+    font-size: 15px; 
+    color: #111010; 
+    font-weight:bold;
+    position: relative;
+    left: -4px;
+    cursor: pointer;
+}
+  

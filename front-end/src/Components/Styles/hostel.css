@@ -1,0 +1,95 @@
+.hostel_form {
+    border: 3px solid whitesmoke;
+}
+
+.hostel_table {
+    border: 1px solid #00BFFF;
+    width: fit-content;
+}
+
+.hostel_h2 {
+    text-align: center;
+}
+
+.hostel_h3 {
+    height: 30px;
+    background-color: #0062ff;
+    line-height: 20px;
+    margin: auto;
+}
+
+.hostel_containe {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 10px 80px;
+    grid-gap: 60px;
+    /* text-align: left; */
+    /* background-color:black ; */
+}
+
+.hostel_bod {
+    display: flex;
+    flex-direction: column;
+}
+
+.hostel_content {
+    margin-top: 30px;
+    line-height: 25px;
+    margin-bottom: 30px;
+    ;
+    /* height: 100px; */
+}
+
+.hostel_totaltables {
+    display: flex;
+    justify-content: center;
+}
+
+.hostel_inp {
+    height: 30px;
+    width: 350px;
+}
+
+.hostel_inp1 {
+    height: 30px;
+    width: 180px;
+}
+
+.hostel_inp2 {
+    /* margin-left: 20px; */
+    height: 35px;
+    /* width: 150px; */
+}
+
+#saveButton {
+    cursor: pointer;
+    background-color: rgb(12, 174, 9);
+    color: white;
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgb(12, 174, 9);
+}
+
+#backButton {
+    background-color: rgb(97, 97, 234);
+    color: white;
+    width: 70px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgb(12, 174, 9);
+    cursor: pointer;
+}
+
+.hostel_buttons {
+    padding-bottom: 50px;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hostel_error {
+    margin-bottom: -20px;
+    color: red;
+}
