@@ -53,8 +53,8 @@ function AddBranch() {
     setErrors(curErrors);
     if (Object.keys(curErrors).length === 0) {
       const res = await axios.post(`${backend_path}/store_branch`, formData)
-      // .then(res => // console.log(res.data))
-      // .catch(err => // console.log(err));
+      // .then(res => // // console.log(res.data))
+      // .catch(err => // // console.log(err));
       if (res.data.error) {
         // alert("You haven't login")
         // navigate("/")
@@ -71,7 +71,7 @@ function AddBranch() {
         setPath("../branch_details")
         setShowAlert(true);
       } else {
-        // console.log(res.data.msg);
+        // // console.log(res.data.msg);
       }
     }
   };
@@ -94,7 +94,7 @@ function AddBranch() {
   useEffect(() => {
     async function fetchData() {
       const res = await axios.post(`${backend_path}/get_branch_code`)
-      // console.log(res.data.result);
+      // // console.log(res.data.result);
 
       if (res.data.error) {
         // alert("You haven't login")
@@ -114,12 +114,12 @@ function AddBranch() {
       if (res.data.success) {
         setBranchCodes(res.data.result)
       }
-      // console.log(branchCodes);
+      // // console.log(branchCodes);
 
     }
     fetchData();
     // .then(res => setBranchCodes(res.data))
-    // .catch(err => // console.log(err));
+    // .catch(err => // // console.log(err));
   }, []);
 
   const courseCodesSet = new Set(branchCodes.map(item => item.coursecode));

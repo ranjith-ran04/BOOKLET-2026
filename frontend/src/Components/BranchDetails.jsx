@@ -35,10 +35,10 @@ function BranchDetails() {
 
             if (res.data.success) {
                 setData(res.data.result.brn_det)
-                console.log(res.data.result.brn_det)
+                // console.log(res.data.result.brn_det)
                 setPropData(res.data.result.prop_det)
             } else {
-                console.log(res.data.message);
+                // console.log(res.data.message);
             }
 
 
@@ -66,8 +66,8 @@ function BranchDetails() {
     }
 
     const confirmDelete = (id) => {
-        console.log(data);
-        console.log(propData);
+        // console.log(data);
+        // console.log(propData);
 
         setDelId(id)
     }

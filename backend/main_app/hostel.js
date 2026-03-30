@@ -56,7 +56,7 @@ const hostel_update = async (req, res) => {
     max,
   } = req.body;
 
-  console.log(req.body);
+  // console.log(req.body);
 
   try {
     const [db_hos_upd] = await conn.query(
@@ -92,7 +92,7 @@ const hostel_update = async (req, res) => {
     }
   }
   catch (err) {
-console.log(req.body);
+// console.log(req.body);
     res.status(500).json({ success: false, message: "Failed to update" });
   }
 

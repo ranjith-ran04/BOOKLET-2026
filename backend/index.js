@@ -22,5 +22,5 @@ const main_routes=require('./main_app/routes.js')
 app.use('/api',main_routes)
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+     console.log(`Server is running on port ${port}`);
   });

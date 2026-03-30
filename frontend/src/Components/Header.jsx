@@ -24,8 +24,8 @@ function Header() {
         <div className='header_container'>
             <img src={Logo} className='header_logo'  alt="" />
             <div>
-                <h3 className='header_heading' style={{fontSize:'large'}}>TAMILNADU ENGINEERING ADMISSIONS 2025</h3>
-                <h3 className='header_heading'>தமிழ்நாடு பொறியியல் சேர்க்கை 2025</h3>
+                <h3 className='header_heading' style={{fontSize:'large'}}>TAMILNADU ENGINEERING ADMISSIONS 2026</h3>
+                <h3 className='header_heading'>தமிழ்நாடு பொறியியல் சேர்க்கை 2026</h3>
             </div>
             <div className='header_logout' onClick={handleLogout}>
              <img src={Logout} className='header_login' alt="logout" />

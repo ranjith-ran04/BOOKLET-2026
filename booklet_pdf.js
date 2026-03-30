@@ -37,7 +37,7 @@ const loadData = async (c_code) => {
 
 async function generatePDF(data, res, c_code) {
   try {
-    // console.log("Starting PDF generation...");
+    // // console.log("Starting PDF generation...");
 
     const browser = await puppeteer.launch({
       headless: true,
@@ -438,7 +438,7 @@ th, td {
       },
     });
 
-    // console.log("PDF successfully generated.");
+    // // console.log("PDF successfully generated.");
     await browser.close();
 
     // Correctly setting headers to return a PDF
@@ -458,7 +458,7 @@ th, td {
 
 async function main_pdf(req, res) {
   const { c_code } = req.body;
-  // console.log("in pdf function");
+  // // console.log("in pdf function");
 
   const data = await loadData(c_code);
   if (data) {

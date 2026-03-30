@@ -48,10 +48,9 @@ const loadData = async (c_code) => {
 
 async function generatePDF(summaries, coursesall, proposed_branch, res) {
   try {
-    console.log("Starting PDF generation...");
+    // console.log("Starting PDF generation...");
     
     logError("Chrome Path : " + chromePaths.chrome);
-    return res.status(500).json({ msg: chromePaths.chrome});
 
 
 
@@ -64,9 +63,9 @@ async function generatePDF(summaries, coursesall, proposed_branch, res) {
 
     const mergedPdf = await PDFDocument.create();
 
-    // console.log("in fuction");
+    // // console.log("in fuction");
 
-    // console.log(proposed_branch);
+    // // console.log(proposed_branch);
 
 
 
@@ -75,9 +74,9 @@ async function generatePDF(summaries, coursesall, proposed_branch, res) {
       const clgCourses = coursesall.filter(course => course.collegecode == item.collegecode);
       const clgProposedCourses = proposed_branch.filter(course => course.collegecode == item.collegecode);
 
-      // console.log("in loop");
+      // // console.log("in loop");
       // 
-      // console.log(proposed_branch);
+      // // console.log(proposed_branch);
 
 
 
@@ -416,7 +415,7 @@ th, td {
     res.setHeader('Content-Disposition', `attachment; filename=booklet.pdf`);
     res.setHeader('Content-Length', mergedPdfBuffer.length);
     res.end(mergedPdfBuffer);
-    console.log("PDF successfully generated ");
+    // console.log("PDF successfully generated ");
   } catch (error) {
     console.error('Error generating PDF:', error);
     logError("Error in generating PDF : " + error);
@@ -427,12 +426,12 @@ th, td {
 async function main_booklet_pdf(req, res) {
 
 
-  // console.log("in pdf function");
+  // // console.log("in pdf function");
 
 
 
   const { summaries, coursesall, proposed_branch } = await loadData();
-  // console.log(proposed_branch);
+  // // console.log(proposed_branch);
 
   await generatePDF(summaries, coursesall, proposed_branch, res);
 }

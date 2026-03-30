@@ -377,7 +377,7 @@ th, td {
       },
     });
 
-    console.log('PDF successfully generated.');
+    // console.log('PDF successfully generated.');
     await browser.close();
 
     // Correctly setting headers to return a PDF
@@ -396,11 +396,11 @@ th, td {
 
 async function main_pdf(req, res) {
   const { c_code } = req.body;
-  console.log(c_code);
-  console.log("in pdf function");
+  // console.log(c_code);
+  // console.log("in pdf function");
 
   const data = await loadData(c_code);
-  console.log("fetched data : \n", data);
+  // console.log("fetched data : \n", data);
   if (data) {
     await generatePDF(data, res, c_code);
   }

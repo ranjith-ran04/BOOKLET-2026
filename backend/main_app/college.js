@@ -5,15 +5,15 @@ const college_insert = async (req, res) => {
   
   const {c_code}=req.body
 
-console.log(c_code)
+// console.log(c_code)
   const values =  [req.body.inputs.principal_name, req.body.inputs.email, req.body.inputs.phone_number, req.body.inputs.Address, req.body.inputs.district, req.body.inputs.Taluk_name, req.body.inputs.pincode, req.body.inputs.ragging_phone_number, req.body.inputs.website,req.body.inputs.placement_count,c_code]
-  console.log("request comes")
+  // console.log("request comes")
   try {
 
     const [db_col_ins] = await conn.query("UPDATE summaries SET name=?,email=?,phone=?,address=?,district=?,taluk=?,pincode=?,antiphone=?,website=? ,placement=? where collegecode=?" ,values
   
     )
-    console.log(db_col_ins)
+    // console.log(db_col_ins)
     if (db_col_ins) {
       res.status(200).json({ success: true, message: "College Details updated successfully" });
     }
@@ -29,12 +29,12 @@ const getcollegedetails=async(req,res)=>{
 
 
   const {c_code}=req.body
-  console.log(c_code);
+  // console.log(c_code);
   
   try {
    
     const[db_get_col]=await conn.query("SELECT name,email,phone,address,district,taluk,pincode,antiphone,website,placement from summaries WHERE collegecode=?",[c_code])
-    console.log(db_get_col);
+    // console.log(db_get_col);
   
   
     if (db_get_col) {
@@ -72,7 +72,7 @@ const getcollegedetails=async(req,res)=>{
   }
   const submitcol=async(req,res)=>{
     const{c_code}=req.body
-    console.log(c_code)
+    // console.log(c_code)
     try{
       const[submitc]=await conn.query(` select collegecode,collegename from summaries where collegecode=?`,[c_code])
       res.status(200).json({status:"Success",clg_data:submitc,msg:"clg_data"})

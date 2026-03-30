@@ -212,7 +212,7 @@ function Hostel() {
       }
 
       const res = await axios.post(`${backend_path}/hostel_get`, { c_code: 1 })
-      // console.log(res.data);
+      // // console.log(res.data);
       // return res.data;
       // setdb(res.data)
       if (res.data.error) {
@@ -222,7 +222,7 @@ function Hostel() {
         return;
 
       }
-      console.log("clg code:",clgName);
+      // console.log("clg code:",clgName);
       
       setformData({
         collegecode:formData.collegecode,
@@ -252,14 +252,14 @@ function Hostel() {
 
     }
     // const hii=getdata()
-    // // console.log(hii);
+    // // // console.log(hii);
 
     getdata()
   }, [])
   const fetchdata = async () => {
     const res = await axios.post(`${backend_path}/hostel_update`, formData);
     // setresponse(res.data)
-    // // console.log(res.data)
+    // // // console.log(res.data)
 
     if (res.data.success) {
       setAlertMsg(res.data.message)

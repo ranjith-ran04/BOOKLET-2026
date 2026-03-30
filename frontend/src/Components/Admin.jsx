@@ -31,7 +31,7 @@ const Admin = () => {
   ,[])
 
   const handleDownloadPdf = async (cc) => {
-    // console.log(clgData);
+    // // console.log(clgData);
     setIsLoading(true)
     alert("in handle download pdf")
     await axios.post(`${backend_path}/admin_generate_pdf`,{c_code:cc}, { responseType: 'blob' })
@@ -95,10 +95,10 @@ const Admin = () => {
  const handlesubmit= async (e)=>{
   e.preventDefault();
 
-  // console.log("hjh");
+  // // console.log("hjh");
   try {
     const res = await axios.post(`${backend_path}/submitcol`, { c_code: ccode })
-    // console.log(res.data.clg_data)
+    // // console.log(res.data.clg_data)
     setClgData(res.data.clg_data)
 
 

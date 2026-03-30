@@ -9,10 +9,10 @@ const conn = mysql.createPool({
 
 // conn.connect((err) => {
 //   if (err) {
-//     console.log(err);
+//     // console.log(err);
 //     return;
 //   }
-//   console.log("connected");
+//   // console.log("connected");
 // });
 
 module.exports = conn;

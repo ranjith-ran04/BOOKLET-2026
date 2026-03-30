@@ -54,7 +54,7 @@ function NewBranch() {
         if (Object.keys(errors).length === 0) {
 
             const res = await axios.post(`${backend_path}/store_new_branch`, { formData:formData })
-            // console.log(res.data)
+            // // console.log(res.data)
             if (res.data.success) {
                 // window.location.href='/branch_details'
                 setAlertMsg("New branch added successfully!")

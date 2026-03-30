@@ -49,10 +49,10 @@ const Home = () => {
       const freezestate = result.data.freeze
 
       const prop_branch = result.data.proposed_branch
-      // console.log(branch_info.new_intake)
-      // console.log(branch_info.intake)
-      // console.log(branch_info.new_intake)
-      console.log(c_info)
+      // // console.log(branch_info.new_intake)
+      // // console.log(branch_info.intake)
+      // // console.log(branch_info.new_intake)
+      // console.log(c_info)
       setdata(c_info)
       setbranchdata(branch_info)
       setfreeze(freezestate == "F")
@@ -119,7 +119,7 @@ const Home = () => {
 
     }
     catch (error) {
-      // console.log("updating freeze flag error")
+      // // console.log("updating freeze flag error")
 
     }
 
@@ -171,8 +171,8 @@ const Home = () => {
     setShowfAlert(true)
     setAlertMessage("Are You Want Freeze The College?")
   }
-  // console.log("ijhsuiysuyu")
-  // console.log(branchdata.new_intake)
+  // // console.log("ijhsuiysuyu")
+  // // console.log(branchdata.new_intake)
   return (
 
     <>

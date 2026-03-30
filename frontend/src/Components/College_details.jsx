@@ -141,7 +141,7 @@ function College_details() {
   }, [])
 
   const fetchdata = async () => {
-    // console.log("fetchruns");
+    // // console.log("fetchruns");
     const res=await axios.post(`${backend_path}/college_insert`, {inputs});
     if(res.data.success==true){
       setAlertMsg(res.data.message)

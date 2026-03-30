@@ -9,18 +9,18 @@ async function hashing(password){
     return hashpass;
     }
     catch(err){
-        console.log(err)
+        // console.log(err)
     }
 }
 
 async function checkpass(password,dbpass){
     try{
     const checkpass= await bcrypt.compare(password,dbpass)
-    console.log("checkpass",checkpass)
+    // console.log("checkpass",checkpass)
     return checkpass;
     }
     catch(err){
-        console.log(err)
+        // console.log(err)
 
     }
 

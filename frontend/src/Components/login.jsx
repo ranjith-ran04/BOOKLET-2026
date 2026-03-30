@@ -82,7 +82,7 @@ function Login() {
   return (
     <div className="login_container">
       <h2 className="login_header1">INFORMATION ABOUT THE COLLEGES</h2>
-      <h2 className="login_header1" style={{marginTop:"40px"}}>BOOKLET INFORMATION  FOR THE FIRST YEAR BE/BTech., ADMISSIONS - 2025</h2>
+      <h2 className="login_header1" style={{marginTop:"40px"}}>BOOKLET INFORMATION  FOR THE FIRST YEAR BE/BTech., ADMISSIONS - 2026</h2>
       <h3 className="login_header2">கல்லூரிகள் பற்றிய தகவல்கள்</h3>
       <form className="login_form" onSubmit={handleSubmit}>
         <div className="login_content">

@@ -4,7 +4,7 @@ const freeze = async (req, res) => {
   const {c_code}=req.body
 
   const {freeze}=req.body
-  console.log(req.body.freeze)
+  // console.log(req.body.freeze)
   const fquery= 'UPDATE login SET freeze=? where c_code= ?'
   
   conn.query(fquery, [freeze,c_code] ,(error,result) => {
@@ -17,9 +17,9 @@ const freeze = async (req, res) => {
 
 const unfreeze = async (req,res)=>{
   const {c_code}=req.body
-  console.log("hiii");
+  // console.log("hiii");
 
-  console.log("College code in unfreeze :",req.body);
+  // console.log("College code in unfreeze :",req.body);
   
   try {
     
@@ -30,7 +30,7 @@ const unfreeze = async (req,res)=>{
     )
     res.status(200).json({status:'success',msg:"unfreeze"})
   } catch (error) {
-console.log("College code error in unfreeze :",error);
+// console.log("College code error in unfreeze :",error);
     res.status(500).json({status:"Server error",msg:"unfreeze"})
   }
 }

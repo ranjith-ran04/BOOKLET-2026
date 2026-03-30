@@ -51,7 +51,7 @@ function Bank_details() {
         setShowAlert(true);
         return;
       }
-      // console.log(res.data.result[0]);
+      // // console.log(res.data.result[0]);
       
       
 
@@ -72,7 +72,7 @@ function Bank_details() {
 
     }
     catch (err) {
-      // console.log(error)
+      // // console.log(error)
     }
 
   }
@@ -141,9 +141,9 @@ function Bank_details() {
     e.preventDefault();
     setsubmit(true);
     const errors = validate(inputs);
-    // // console.log(errors)
+    // // // console.log(errors)
     seterror(errors);
-    // // console.log(errors)
+    // // // console.log(errors)
     if (Object.keys(errors).length == 0) {
       fetchdata()
 
@@ -155,10 +155,10 @@ function Bank_details() {
   const handle = (e) => {
 
     setinput({ ...inputs, [e.target.name]: e.target.value })
-    // // console.log(inputs)
+    // // // console.log(inputs)
     const errors = validate(inputs);
     seterror(errors);
-    // // console.log(errors)
+    // // // console.log(errors)
   }
 
   useEffect(() => {

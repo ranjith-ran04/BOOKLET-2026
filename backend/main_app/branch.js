@@ -32,7 +32,7 @@ const conn = require('./db.js')
 const store_branch = async (req, res) => {
   const { branchName, branchCode, approvedIntake, yearOfStart, NBA, accreditedUpto, c_code, clg_name } = req.body;
   // const error = validate(req.body)
-  // console.log(req.body);
+  // // console.log(req.body);
   try {
     // if (Object.keys(error).length === 0) {
     const [db_brn_ins] = await conn.query("INSERT INTO coursesall(collegecode,collegename,coursecode,coursename,intake,startyear,nba,validity) VALUES (?,?,?,?,?,?,?,?)",
@@ -108,7 +108,7 @@ const get_branch_details = async (req, res) => {
       where collegecode = ?`,
       [c_code]
     )
-    console.log(db_get_prop);
+   // // console.log(db_get_prop);
 
     if (db_get_brn && db_get_prop) {
       res.status(200).json({ success: true, message: "data received successfully", result: { brn_det: db_get_brn, prop_det: db_get_prop } });
@@ -127,7 +127,7 @@ const get_branch_details = async (req, res) => {
 
 const specific_row = async (req, res) => {
   const { id, c_code, clg_name } = req.body;
-  console.log(req.body);
+ // // console.log(req.body);
 
   try {
     const [db_get_spc] = await conn.query(`
@@ -156,8 +156,8 @@ const specific_row = async (req, res) => {
 }
 
 const update_add_branch = async (req, res) => {
-  console.log(req.body.proposedIntake)
-  console.log(req.body);
+  // console.log(req.body.proposedIntake)
+  // console.log(req.body);
   const { data, c_code, clg_name } = req.body;
   const cc = data.branchCode;
 
@@ -197,8 +197,8 @@ const update_new_branch = async (req, res) => {
   const { data, c_code, clg_name } = req.body;
   const cn = data.oldBranchName;
   // const error = validate(data)
-  // console.log(data);
-  // console.log(error);
+  // // console.log(data);
+  // // console.log(error);
   try {
     // if (Object.keys(error).length === 0) {
     const [db_upd_new_brn] = await conn.query(`

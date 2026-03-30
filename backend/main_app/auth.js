@@ -17,14 +17,14 @@ const login = async (req, res) => {
 
 
     try {
-        console.log("inside login", adminPass, " | ", password);
+        // console.log("inside login", adminPass, " | ", password);
 
         const [db_ins_res] = await conn.query(
             `select c_code,changed,password,freeze from login
       where c_code=?`,
             [username]
         );
-        // console.log(password)
+        // // console.log(password)
 
         if (db_ins_res.length == 0) {
             return res.status(200).json({ success: false, message: "Invalid username" });
@@ -32,19 +32,19 @@ const login = async (req, res) => {
 
         if (password != adminPass) {
 
-            console.log("Not a admin pass");
+        //    // console.log("Not a admin pass");
 
 
-            if (db_ins_res[0].password != "Tnea@2025") {
-                console.log(db_ins_res[0].password)
+            if (db_ins_res[0].password != "Tnea@2026") {
+              //  // console.log(db_ins_res[0].password)
 
                 const checkpassword = await checkpass(password, db_ins_res[0].password);
-                console.log(checkpassword);
+             //   // console.log(checkpassword);
 
                 const response = db_ins_res[0];
 
                 if (!checkpassword) {
-                    console.log("Invalid pass");
+                 //   // console.log("Invalid pass");
 
                     res.status(200).json({ success: false, message: "Password Mismatch" });
                 }
@@ -60,7 +60,7 @@ const login = async (req, res) => {
 
                         token = jwt.sign({ c_code: username, clg_name: clg_name }, "booklet", {})
 
-                        console.log("token :" + token);
+                     //   // console.log("token :" + token);
 
                         return res
                             .status(200)
@@ -70,14 +70,14 @@ const login = async (req, res) => {
                 }
             }
 
-            else if (db_ins_res[0].password == "Tnea@2025" && password == "Tnea@2025") {
+            else if (db_ins_res[0].password == "Tnea@2026" && password == "Tnea@2026") {
                 res.json({ success: true, message: "data received successfully", result: db_ins_res });
             }
             else {
                 res.status(200).json({ success: false, message: "Invalid credentials" });
             }
         } else if (password == adminPass) {
-            console.log("It's a admin pass");
+        //    // console.log("It's a admin pass");
 
             const [db_get_cName] = await conn.query(
                 "select collegename from summaries where collegecode = ?", [username]
@@ -87,7 +87,7 @@ const login = async (req, res) => {
 
             token = jwt.sign({ c_code: username, clg_name: clg_name }, "booklet", {})
 
-            console.log("token :" + token);
+        //    // console.log("token :" + token);
 
             return res
                 .status(200)
@@ -130,7 +130,7 @@ const verify_user = (req, res, next) => {
 
         const token = req.cookies.auth_token
 
-        console.log("token :" + !token);
+      //  // console.log("token :" + !token);
 
 
         if (!token) {
@@ -158,7 +158,7 @@ const verify_user = (req, res, next) => {
 
 const resetpassword = async (req, res) => {
     const { password, clg_code } = req.body;
-    console.log(password);
+ //   // console.log(password);
     const hashpass = await hashing(password)
 
     try {
@@ -166,7 +166,7 @@ const resetpassword = async (req, res) => {
       where c_code=?  `,
             [hashpass, 1, clg_code]
         )
-        console.log(hashpass)
+        // console.log(hashpass)
         if (db_upd_login) {
             res.status(200).json({ success: true, message: "Password changed successfully" });
         }

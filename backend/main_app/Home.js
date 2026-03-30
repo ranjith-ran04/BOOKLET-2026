@@ -14,7 +14,7 @@ const Home_update = async (req, res) => {
       conn.query('SELECT * FROM proposed_branch where collegecode=?', [c_code])
     ]);
 
-    console.log(result4[0])
+    // console.log(result4[0])
     res.json({
       cinfo: result1[0],
       branchinfo: result2[0],

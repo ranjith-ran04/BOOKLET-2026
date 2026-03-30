@@ -30,7 +30,7 @@ const loadData = async (c_code) => {
 
 async function generatePDF(summaries, coursesall, proposed_branch, res) {
   try {
-    console.log("Starting PDF generation...");
+    // console.log("Starting PDF generation...");
 
     const browser = await puppeteer.launch({
       headless: true,
@@ -338,7 +338,7 @@ th, td {
     await browser.close();
 
     // const combinedPdf = Buffer.concat(buffArr)
-    console.log('PDF successfully generated.');
+    // console.log('PDF successfully generated.');
 
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', `attachment; filename = booklet.pdf`);
@@ -355,7 +355,7 @@ th, td {
 async function main_booklet_pdf(req, res) {
 
 
-  console.log("in pdf function");
+  // console.log("in pdf function");
 
 
 

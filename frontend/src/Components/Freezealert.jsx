@@ -2,7 +2,7 @@ import React from 'react';
 import './Styles/Freezealert.css';
 
 const FreezeAlert = ({ message, onConfirm, onCancel }) => {
-  // console.log("In Confirm");
+  // // console.log("In Confirm");
 
   return (
 

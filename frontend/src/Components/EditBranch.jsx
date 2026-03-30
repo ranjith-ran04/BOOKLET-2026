@@ -59,32 +59,32 @@ function EditBranch() {
 
         if (Object.keys(errors).length <= 1 && e.target.name === "editAddBranch") {
             const res = await axios.post(`${backend_path}/update_add_branch`, { data: formData })
-            // .then(res => { // console.log(res) })
-            // .catch(err => // console.log(err))
-            // console.log("data")
+            // .then(res => { // // console.log(res) })
+            // .catch(err => // // console.log(err))
+            // // console.log("data")
             if (res.data.success) {
-                // console.log(res.data)
+                // // console.log(res.data)
                 setAlertMsg("Branch details updated successfully..!")
                 setPath("../")
                 setShowAlert(true);
             } else {
-                // console.log(res.data.message);
+                // // console.log(res.data.message);
             }
         }
         if (Object.keys(errors).length <= 2 && e.target.name === "editNewBranch") {
-            // console.log(branchName);
+            // // console.log(branchName);
             const res = await axios.post(`${backend_path}/update_new_branch`, { data: formData })
             // .then(res => {
-            //     // console.log(res)
+            //     // // console.log(res)
             // })
-            // .catch(err => // console.log(err))
+            // .catch(err => // // console.log(err))
             if (res.data.success) {
               
                 setAlertMsg("Branch details updated successfully..!")
                 setPath("../")
                 setShowAlert(true);
             } else {
-                // console.log(res.data.message);
+                // // console.log(res.data.message);
 
             }
         }
@@ -111,7 +111,7 @@ function EditBranch() {
 
             }
             if (res.data.success) {
-                console.log("edit fetch data",sessionStorage.getItem("b_code") );
+                // console.log("edit fetch data",sessionStorage.getItem("b_code") );
                 setFetchedData(res.data.result[0])
 
                 setFormData({
@@ -221,7 +221,7 @@ function EditBranch() {
                             <div>
                                 <label className='edit_branch_labels'>Year of starting course :</label><br />
                                 <input type='number' name='yearOfStart' className='edit_branch_inputs' value={formData.yearOfStart && formData.yearOfStart} onChange={handleChange} disabled />
-                                <p style={{ color: "gray", position: "relative", bottom: "20px", fontSize: "13px" }}>(Year upto 2025 e.g, 2024 )</p>
+                                <p style={{ color: "gray", position: "relative", bottom: "20px", fontSize: "13px" }}>(Year upto 2026 e.g, 2025 )</p>
                                 {errors.yearOfStart && <p className='edit_branch_error'>{errors.yearOfStart}</p>}
                             </div>
                             <div>
