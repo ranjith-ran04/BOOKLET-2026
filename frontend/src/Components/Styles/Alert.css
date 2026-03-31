@@ -51,3 +51,85 @@
 .ok-btn:hover {
   background-color: #218838;
 }
+
+/* Container */
+.admin-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  background: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+  width: 100%;           /* allow full width */
+  flex-wrap: nowrap;     /* IMPORTANT: force single line */
+}
+
+/* Label */
+.admin-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* Input */
+.admin-input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  min-width: 150px;
+}
+
+.admin-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Button group */
+.admin-btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* Base button */
+.admin-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Button types */
+.admin-btn.primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.admin-btn.primary:hover {
+  background-color: #1e4fd6;
+}
+
+.admin-btn.warning {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.admin-btn.warning:hover {
+  background-color: #d97706;
+}
+
+.admin-btn.danger {
+  background-color: #dc2626;
+  color: white;
+}
+
+.admin-btn.danger:hover {
+  background-color: #b91c1c;
+}

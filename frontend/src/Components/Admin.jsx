@@ -7,49 +7,49 @@ import Alert from "./Alert";
 const Admin = () => {
 
   const [ccode, setCcode] = useState('')
-  const [clgData,setClgData] = useState([])
-  const [isLoading,setIsLoading]=useState(false)
-  const [isBookletLoading,setIsBookletLoading]=useState(false)
-  const [pdfUrl,setPdfUrl]=useState(null)
+  const [clgData, setClgData] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
+  const [isBookletLoading, setIsBookletLoading] = useState(false)
+  const [pdfUrl, setPdfUrl] = useState(null)
   const [showAlert, setShowAlert] = useState(false)
   const [alertMsg, setAlertMsg] = useState('')
   const [path, setPath] = useState('')
 
 
-  useEffect(()=>{
-     async function fetchData() {
-        const res=await axios.post(`${backend_path}/admin_clg_data`,{})
-        if(res.data.status=="Fail"){
-          setAlertMsg(res.data.message)
-          setPath("/")
-          setShowAlert(true);
-        }
-        setClgData(res.data.clg_data)
+  useEffect(() => {
+    async function fetchData() {
+      const res = await axios.post(`${backend_path}/admin_clg_data`, {})
+      if (res.data.status == "Fail") {
+        setAlertMsg(res.data.message)
+        setPath("/")
+        setShowAlert(true);
       }
-      fetchData();
+      setClgData(res.data.clg_data)
     }
-  ,[])
+    fetchData();
+  }
+    , [])
 
   const handleDownloadPdf = async (cc) => {
     // // console.log(clgData);
     setIsLoading(true)
     alert("in handle download pdf")
-    await axios.post(`${backend_path}/admin_generate_pdf`,{c_code:cc}, { responseType: 'blob' })
-    .then((res) => {
+    await axios.post(`${backend_path}/admin_generate_pdf`, { c_code: cc }, { responseType: 'blob' })
+      .then((res) => {
         // const pdfBlob = ,{type:"application/pdf"})
         const pdfurl = window.URL.createObjectURL(new Blob([res.data]))
-        const link=document.createElement('a')
-        link.href=pdfurl;
+        const link = document.createElement('a')
+        link.href = pdfurl;
         // link.setAttribute('download','booklet.pdf')
-        link.download="booklet.pdf"
+        link.download = "booklet.pdf"
         document.body.appendChild(link)
         link.click();
         window.URL.revokeObjectURL(pdfUrl)
         setPdfUrl(pdfUrl)
       })
-      .catch((err)=>{
-        console.error("error fetching pdf",err);
-        
+      .catch((err) => {
+        console.error("error fetching pdf", err);
+
       })
     setIsLoading(false)
 
@@ -58,24 +58,24 @@ const Admin = () => {
   const handleDownloadBooklet = async (cc) => {
     setIsBookletLoading(true)
     alert("in handle download pdf")
-    await axios.post(`${backend_path}/admin_booklet`,{}, { responseType: 'blob' })
-    .then((res) => {
+    await axios.post(`${backend_path}/admin_booklet`, {}, { responseType: 'blob' })
+      .then((res) => {
         // const pdfBlob = ,{type:"application/pdf"})
         const pdfurl = window.URL.createObjectURL(new Blob([res.data]))
-        const link=document.createElement('a')
-        link.href=pdfurl;
+        const link = document.createElement('a')
+        link.href = pdfurl;
         // link.setAttribute('download','booklet.pdf')
-        link.download="booklet.pdf"
+        link.download = "booklet.pdf"
         document.body.appendChild(link)
         link.click();
         window.URL.revokeObjectURL(pdfUrl)
         setPdfUrl(pdfUrl)
       })
-      .catch((err)=>{
-        console.error("error fetching pdf",err);
-        
+      .catch((err) => {
+        console.error("error fetching pdf", err);
+
       })
-      setIsBookletLoading(false)
+    setIsBookletLoading(false)
 
   }
 
@@ -92,29 +92,66 @@ const Admin = () => {
       console.error(err);
     }
   }
- const handlesubmit= async (e)=>{
-  e.preventDefault();
+  const handlesubmit = async (e) => {
+    e.preventDefault();
 
-  // // console.log("hjh");
-  try {
-    const res = await axios.post(`${backend_path}/submitcol`, { c_code: ccode })
-    // // console.log(res.data.clg_data)
-    setClgData(res.data.clg_data)
+    // // console.log("hjh");
+    try {
+      const res = await axios.post(`${backend_path}/submitcol`, { c_code: ccode })
+      // // console.log(res.data.clg_data)
+      setClgData(res.data.clg_data)
 
 
-  } catch (err) {
-    console.error(err);
+    } catch (err) {
+      console.error(err);
+    }
   }
- }
+  const handleUnsetPassword = async () => {
+
+    if (!ccode) {
+      alert("Please enter a college code first");
+      return;
+    }
+    if (!window.confirm(`Unset password for ${ccode}?`)) return;
+    try {
+      const res = await axios.post(`${backend_path}/unset_password`, {
+        c_code: ccode,
+      });
+
+      if (res.data.status === "success") {
+        alert(`Password unset successful for ${ccode}`);
+      } else {
+        alert(res.data.message || "Failed to unset password");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error unsetting password");
+    }
+  };
 
   return (
     <div className="admin_container">
       <div className="admin_form_container">
-        <form onSubmit={handlesubmit}>
-          <label htmlFor="college code">College code</label>
-          <input type="text" name="c_code" onChange={(e) => { setCcode(e.target.value) }} />
-          <button type="submit">Submit</button>
-          <button onClick={handleunfreeze }>Unfreeze</button>
+        <form className="admin-form" onSubmit={handlesubmit}>
+          <label className="admin-label" htmlFor="college code">College code</label>
+          <input className="admin-input" type="text" name="c_code" onChange={(e) => { setCcode(e.target.value) }} />
+          <div className="admin-btn-group">
+            <button className="admin-btn primary" type="submit">
+              Submit
+            </button>
+
+            <button className="admin-btn warning" onClick={handleunfreeze}>
+              Unfreeze
+            </button>
+
+            <button
+              className="admin-btn danger"
+              type="button"
+              onClick={handleUnsetPassword}
+            >
+              Unset Password
+            </button>
+          </div>
         </form>
       </div>
       <div className='Home-Branchdetails'>
@@ -135,15 +172,15 @@ const Admin = () => {
           </thead>
           <tbody>
             {
-              clgData.map((item,index)=>{
-                return(
-                  <tr  key={index}>
+              clgData.map((item, index) => {
+                return (
+                  <tr key={index}>
                     <td>{item.collegecode}</td>
                     <td className='branch-name-align admin_clg_name'>{item.collegename}</td>
                     {
-                      !isLoading ?(
-                        <button className="admin_download_pdf" onClick={()=>{handleDownloadPdf(item.collegecode)}}>Download PDF</button>
-                      ):(
+                      !isLoading ? (
+                        <button className="admin_download_pdf" onClick={() => { handleDownloadPdf(item.collegecode) }}>Download PDF</button>
+                      ) : (
                         <p>Loading</p>
                       )
                     }
@@ -155,14 +192,14 @@ const Admin = () => {
 
         </table>
 
-            {
-              !isBookletLoading ?(
-                <button onClick={handleDownloadBooklet}>Download Booklet</button>
-              ):(
-                <p>Loading</p>
-              )
-            }
-        { showAlert ?
+        {
+          !isBookletLoading ? (
+            <button onClick={handleDownloadBooklet}>Download Booklet</button>
+          ) : (
+            <p>Loading</p>
+          )
+        }
+        {showAlert ?
           (<Alert message={alertMsg} path={path} />) : null
         }
 

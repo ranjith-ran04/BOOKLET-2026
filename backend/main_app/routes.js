@@ -8,7 +8,7 @@ const { college_insert, getcollegedetails, clg_data, submitcol } = require('./co
 const { bank_update, getbankdetails } = require("./bank.js")
 const { store_branch, store_new_branch, get_branch_details, specific_row, update_add_branch, update_new_branch, delete_branch, delete_new_branch, get_branch_code } = require("./branch.js");
 const { Home_update } = require("./Home.js");
-const { freeze, unfreeze } = require("./freeze.js");
+const { freeze, unfreeze, unsetPassword } = require("./freeze.js");
 const { main_booklet_pdf } = require("../Pdf/booklet.js")
 
 router.post("/login", login)
@@ -34,6 +34,7 @@ router.post("/specific_branch", verify_user, specific_row)
 router.post("/home", verify_user, Home_update)
 router.post("/home/freeze", verify_user, freeze)
 router.post("/unfreeze",unfreeze)
+router.post("/unset_password", unsetPassword);
 
 router.post("/getcollegedetails", verify_user, getcollegedetails)
 router.post("/college_insert", verify_user, college_insert)
